@@ -5,3 +5,19 @@ edition = "2024"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
+# Checksum
+crc32fast = "1.4"
+
+# Compression
+lz4 = "1.24"
+zstd = { version = "0.13", default-features = false }
+
+# Error handling 
+thiserror = "2.0"
+
+# Safe zero-copy binary serialization لـ storage/format.rs
+bytemuck = { version = "1", features = ["derive"] }
+
+[dev-dependencies]
+tempfile = "3"    # creat a tmp file for testing
+rand = "0.8"      # generate randome data for testing
